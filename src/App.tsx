@@ -1,20 +1,18 @@
-import { Link, Route, Routes } from "react-router";
-import HomePage from "./pages/Home/Home";
+import { Route, Routes } from "react-router";
+import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
+import Navigation from "./components/Navigation/Navigation";
 
 import "./App.scss";
 
 function App() {
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
+      <Navigation />
 
       <main>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>

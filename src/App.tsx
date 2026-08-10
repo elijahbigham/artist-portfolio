@@ -1,8 +1,8 @@
 import { Link, Route, Routes } from "react-router";
-import HomePage from "./pages/Home";
-import About from "./pages/About";
+import HomePage from "./pages/Home/Home";
+import About from "./pages/About/About";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (

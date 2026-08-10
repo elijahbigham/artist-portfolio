@@ -1,14 +1,13 @@
 import { Route, Routes } from "react-router";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
-import Navigation from "./components/Navigation/Navigation";
-
+import Header from "./components/Header/Header";
 import "./App.scss";
 
 function App() {
   return (
     <>
-      <Navigation />
+      <Header />
 
       <main>
         <Routes>

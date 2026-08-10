@@ -1,0 +1,13 @@
+:root {
+  font-family: "Elms Sans", sans-serif;
+}
+header a {
+  text-decoration: none;
+  color: #e06084;
+  font-weight: 500;
+  font-size: 20px;
+
+  &:hover {
+    color: #92334e;
+  }
+}

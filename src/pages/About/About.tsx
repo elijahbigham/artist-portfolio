@@ -3,7 +3,6 @@ import "./About.scss";
 export default function About() {
   return (
     <div>
-      <h1>About</h1>
       <div className="about-content">
         <img
           src="/headshot.webp"

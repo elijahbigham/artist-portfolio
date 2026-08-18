@@ -35,14 +35,79 @@ const worksData = [
     imageFolder: "western",
   },
   {
-    title: "Angel",
+    title: "Christmas Card 2025",
     tags: ["portfolio"],
-    imageFolder: "angel",
+    imageFolder: "christmas-card-2025",
+  },
+  {
+    title: "Cello Dog",
+    tags: ["portfolio"],
+    imageFolder: "cello-dog",
+  },
+  {
+    title: "Flax Granola",
+    tags: ["portfolio", "graphic-design"],
+    imageFolder: "flax-granola",
+  },
+  {
+    title: "Tarantula",
+    tags: ["portfolio"],
+    imageFolder: "tarantula",
+  },
+  {
+    title: "Austen Puzzle",
+    tags: ["portfolio"],
+    imageFolder: "austen-puzzle",
   },
   {
     title: "Astoria Park",
     tags: ["portfolio"],
     imageFolder: "astoria-park",
+  },
+  {
+    title: "Sunhead",
+    tags: ["portfolio"],
+    imageFolder: "sunhead",
+  },
+  {
+    title: "Astoria Poster",
+    tags: ["portfolio"],
+    imageFolder: "astoria-poster",
+  },
+  {
+    title: "Angel",
+    tags: ["portfolio"],
+    imageFolder: "angel",
+  },
+  {
+    title: "George",
+    tags: ["portfolio"],
+    imageFolder: "george",
+  },
+  {
+    title: "Cento",
+    tags: ["portfolio"],
+    imageFolder: "cento",
+  },
+  {
+    title: "Little Women",
+    tags: ["portfolio"],
+    imageFolder: "little-women",
+  },
+  {
+    title: "Self Portrait, Kitchen",
+    tags: ["portfolio"],
+    imageFolder: "self-portrait-kitchen",
+  },
+  {
+    title: "Industrial Street",
+    tags: ["portfolio"],
+    imageFolder: "industrial-street",
+  },
+  {
+    title: "Ouija",
+    tags: ["portfolio"],
+    imageFolder: "ouija",
   },
   {
     title: "All is Well Poster",

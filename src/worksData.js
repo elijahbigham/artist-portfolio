@@ -110,6 +110,31 @@ const worksData = [
     imageFolder: "ouija",
   },
   {
+    title: "Boy in Field",
+    tags: ["portfolio"],
+    imageFolder: "boy-field",
+  },
+  {
+    title: "Egg, Ham, and Chips",
+    tags: ["portfolio"],
+    imageFolder: "egg-ham-and-chips",
+  },
+  {
+    title: "Self Portrait",
+    tags: ["portfolio"],
+    imageFolder: "self-portrait",
+  },
+  {
+    title: "Beetle Party",
+    tags: ["portfolio", "patterns"],
+    imageFolder: "beetle-party",
+  },
+  {
+    title: "Irish Stew",
+    tags: ["portfolio", "patterns"],
+    imageFolder: "irish-stew",
+  },
+  {
     title: "All is Well Poster",
     tags: ["graphic-design"],
     imageFolder: "all-is-well-poster",

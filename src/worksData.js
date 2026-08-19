@@ -131,18 +131,68 @@ const worksData = [
   },
   {
     title: "Irish Stew",
-    tags: ["portfolio", "patterns"],
+    tags: ["portfolio"],
     imageFolder: "irish-stew",
   },
   {
-    title: "All is Well Poster",
+    title: '"The Octopus" Poster',
+    tags: ["graphic-design"],
+    imageFolder: "the-octopus-poster",
+  },
+  {
+    title: "Flax Granola",
+    tags: ["graphic-design"],
+    imageFolder: "flax-granola",
+  },
+  {
+    title: "Bread Testimonial",
+    tags: ["graphic-design"],
+    imageFolder: "bread-testimonial",
+  },
+  {
+    title: "Granola Label",
+    tags: ["graphic-design"],
+    imageFolder: "granola-label",
+  },
+  {
+    title: '"All is Well" Poster',
     tags: ["graphic-design"],
     imageFolder: "all-is-well-poster",
   },
   {
-    title: "All is Well Poster, Alternate Version",
+    title: '"All is Well" Poster, Alternate Version',
     tags: ["graphic-design"],
     imageFolder: "all-is-well-poster-alt",
+  },
+  {
+    title: '"Lightstreet" Poster',
+    tags: ["graphic-design"],
+    imageFolder: "lightstreet-poster",
+  },
+  {
+    title: '"No Pets" Poster',
+    tags: ["graphic-design"],
+    imageFolder: "no-pets-poster",
+  },
+  {
+    title: "B-Day Info",
+    tags: ["graphic-design"],
+    imageFolder: "bday-info",
+  },
+  {
+    title: "Iluma",
+    tags: ["graphic-design"],
+    imageFolder: "iluma",
+  },
+  {
+    title: '"Panerica" Poster',
+    tags: ["graphic-design"],
+    imageFolder: "panerica-poster",
+  },
+  {
+    title: "Web Development",
+    tags: ["web-development"],
+    imageFolder: "web-development",
   },
 ];
 

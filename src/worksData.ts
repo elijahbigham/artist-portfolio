@@ -1,4 +1,10 @@
-type Size = "large" | "medium" | "small";
+export type Size = "large" | "medium" | "small";
+
+export interface Work {
+  title: string;
+  tags: string[];
+  images: Partial<Record<Size, string>>;
+}
 
 const work = (
   folder: string,
@@ -6,12 +12,12 @@ const work = (
   tags: string[],
   ext: "jpg" | "png" = "jpg",
   sizes: Size[] = ["large", "medium", "small"],
-) => ({
+): Work => ({
   title,
   tags,
   images: Object.fromEntries(
     sizes.map((size) => [size, `/works/${folder}/${folder}-${size}.${ext}`]),
-  ) as Partial<Record<Size, string>>,
+  ),
 });
 
 const I = ["illustration"];
@@ -21,7 +27,7 @@ const LS: Size[] = ["large", "small"];
 const L: Size[] = ["large"];
 const S: Size[] = ["small"];
 
-const worksData = [
+const worksData: Work[] = [
   work("highway-vape", "Smoke Break", I),
   work("flyrod-rainbow-trout", "Rainbow Trout", I),
   work("street", "Street Scene", I),
@@ -132,9 +138,20 @@ const worksData = [
 ];
 
 export default worksData;
+
+export const worksByCategory = new Map<string, Work[]>();
+
+// Populate the worksByCategory map with works grouped by their tags.
+for (const work of worksData) {
+  for (const tag of work.tags) {
+    const list = worksByCategory.get(tag);
+    if (list) list.push(work);
+    else worksByCategory.set(tag, [work]);
+  }
+}
 export const categories = [
-  "illustration",
-  "graphic-design",
-  "web-development",
-  "patterns",
+  { label: "Illustration", value: "illustration" },
+  { label: "Graphic Design", value: "graphic-design" },
+  { label: "Web Development", value: "web-development" },
+  { label: "Patterns", value: "patterns" },
 ];

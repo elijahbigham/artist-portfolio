@@ -1,5 +1,7 @@
 @use "./styles/_typography.scss" as *;
-
+* {
+  box-sizing: border-box;
+}
 .hero {
   position: relative;
 
@@ -37,6 +39,11 @@
     transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
       scale(0.8);
   }
+}
+.content-width {
+  width: min(100%, 1440px);
+  padding: 0 32px;
+  margin: 0 auto;
 }
 
 #center {

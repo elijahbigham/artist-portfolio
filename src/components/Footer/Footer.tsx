@@ -1,5 +1,6 @@
 import "./Footer.scss";
 import { NavLink } from "react-router";
+import { categories } from "../../worksData";
 
 export default function Footer() {
   return (
@@ -8,11 +9,11 @@ export default function Footer() {
         <nav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
-          {/*{categories.map((category) => (
+          {categories.map((category) => (
             <NavLink key={category.value} to={`/${category.value}`}>
               {category.label}
             </NavLink>
-          ))}*/}
+          ))}
         </nav>
       </div>
     </footer>

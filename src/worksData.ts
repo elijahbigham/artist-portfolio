@@ -7,6 +7,7 @@ export interface Project {
 
 export interface Work {
   title: string;
+  slug: string;
   tags: string[];
   images: Partial<Record<Size, string>>;
   project?: Project & { cover?: boolean };
@@ -21,6 +22,7 @@ const work = (
   project?: Work["project"],
 ): Work => ({
   title,
+  slug,
   tags,
   images: Object.fromEntries(
     sizes.map((size) => [size, `/works/${slug}/${slug}-${size}.${ext}`]),

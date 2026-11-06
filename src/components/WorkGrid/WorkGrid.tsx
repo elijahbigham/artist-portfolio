@@ -1,6 +1,7 @@
 import type { Work as WorkData } from "../../worksData";
 import Work from "../Work/Work";
 import "../WorkPage/WorkPage.scss";
+import "./WorkGrid.scss";
 
 export default function WorkGrid({
   works,

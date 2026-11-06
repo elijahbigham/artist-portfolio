@@ -7,6 +7,7 @@ import "./App.scss";
 import { categories } from "./worksData";
 import WorkPage from "./components/WorkPage/WorkPage";
 import ProjectPage from "./pages/Project/Project";
+import WorkDetail from "./pages/WorkDetail/WorkDetail";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects/:projectSlug" element={<ProjectPage />} />
-          <Route path="/works/:workSlug" element={<WorkPage />} />
+          <Route path="/works/:workSlug" element={<WorkDetail />} />
         </Routes>
       </main>
 

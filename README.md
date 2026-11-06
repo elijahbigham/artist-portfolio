@@ -10,9 +10,11 @@ member's `work()` call. Mark exactly one member as the cover by passing
 `{ ...project, cover: true }`. All members retain their category tags, but only
 the cover appears in the home and category grids. The cover links to
 `/projects/<slug>`, where all members, including the cover, appear.
+Other grid items and items on a project page link to `/works/<slug>`, which
+shows the work's largest available image.
 
 The root `vercel.json` rewrites direct requests to the app so React Router can
-handle category and project URLs.
+handle category, project, and work URLs.
 
 Currently, two official plugins are available:
 

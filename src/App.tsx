@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import "./App.scss";
 import { categories } from "./worksData";
 import WorkPage from "./components/WorkPage/WorkPage";
+import ProjectPage from "./pages/Project/Project";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           ))}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/projects/:projectSlug" element={<ProjectPage />} />
         </Routes>
       </main>
 

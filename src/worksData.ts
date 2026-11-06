@@ -1,9 +1,15 @@
 export type Size = "large" | "medium" | "small";
 
+export interface Project {
+  slug: string;
+  title: string;
+}
+
 export interface Work {
   title: string;
   tags: string[];
   images: Partial<Record<Size, string>>;
+  project?: Project & { cover?: boolean };
 }
 
 const work = (
@@ -12,12 +18,14 @@ const work = (
   tags: string[],
   ext: "jpg" | "png" = "jpg",
   sizes: Size[] = ["large", "medium", "small"],
+  project?: Work["project"],
 ): Work => ({
   title,
   tags,
   images: Object.fromEntries(
     sizes.map((size) => [size, `/works/${folder}/${folder}-${size}.${ext}`]),
   ),
+  project: project ?? undefined,
 });
 
 const GD = ["graphic-design"];
@@ -26,6 +34,7 @@ const FA = ["fine-arts"];
 const LS: Size[] = ["large", "small"];
 const L: Size[] = ["large"];
 const S: Size[] = ["small"];
+const filmPosters: Project = { slug: "film-posters", title: "Film Posters" };
 
 const worksData: Work[] = [
   work("highway-vape", "Smoke Break", FA),
@@ -64,22 +73,33 @@ const worksData: Work[] = [
   work("self-portrait", "Self Portrait", FA, "jpg", LS),
   work("beetle-party", "Beetle Party", CI, "png", LS),
   work("irish-stew", "Irish Stew", CI),
-  work("the-octopus-poster", '"The Octopus" Poster', GD, "jpg", LS),
+  work("the-octopus-poster", '"The Octopus" Poster', GD, "jpg", LS, {
+    ...filmPosters,
+    cover: true,
+  }),
   work("bread-testimonial", "Bread Testimonial", GD),
   work("granola-label", "Granola Label", GD, "png"),
-  work("all-is-well-poster", '"All is Well" Poster', GD, "jpg", LS),
+  work("all-is-well-poster", '"All is Well" Poster', GD, "jpg", LS, filmPosters),
   work(
     "all-is-well-poster-alt",
     '"All is Well" Poster, Alternate Version',
     GD,
     "jpg",
     LS,
+    filmPosters,
   ),
-  work("lightstreet-poster", '"Lightstreet" Poster', GD, "png", LS),
-  work("no-pets-poster", '"No Pets" Poster', GD, "png"),
+  work("lightstreet-poster", '"Lightstreet" Poster', GD, "png", LS, filmPosters),
+  work(
+    "no-pets-poster",
+    '"No Pets" Poster',
+    GD,
+    "png",
+    ["large", "medium", "small"],
+    filmPosters,
+  ),
   work("bday-info", "B-Day Info", GD),
   work("iluma", "Iluma", GD),
-  work("panerica-poster", '"Panerica" Poster', GD, "png", LS),
+  work("panerica-poster", '"Panerica" Poster', GD, "png", LS, filmPosters),
   work("web-development", "Web Development", GD, "png", S),
   work("seashell-pattern", "Seashell Pattern", CI),
   work("battleship", "Battleship", CI),

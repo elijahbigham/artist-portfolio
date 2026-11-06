@@ -4,7 +4,7 @@ import WorkPage from "../../components/WorkPage/WorkPage";
 export default function HomePage() {
   return (
     <>
-      <WorkPage />
+      <WorkPage categories={[{ value: "fine-arts", label: "Fine Arts" }]} />
     </>
   );
 }

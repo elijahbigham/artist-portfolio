@@ -1,6 +1,5 @@
 import worksData, { worksByCategory } from "../../worksData";
-import Work from "../../components/Work/Work";
-import "./WorkPage.scss";
+import WorkGrid from "../WorkGrid/WorkGrid";
 
 export default function WorkPage({
   categories,
@@ -15,10 +14,9 @@ export default function WorkPage({
       ]
     : worksData;
   return (
-    <div className="work-grid">
-      {worksDataFiltered.map((work) => (
-        <Work key={work.title} work={work} />
-      ))}
-    </div>
+    <WorkGrid
+      works={worksDataFiltered.filter((work) => !work.project || work.project.cover)}
+      linkProjects
+    />
   );
 }

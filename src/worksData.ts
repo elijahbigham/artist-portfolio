@@ -110,7 +110,7 @@ const worksData: Work[] = [
   work("submarine-coral-reef", "Submarine Coral Reef", CI, "jpg", LS),
   work("toy-robot-bookshelf", "Toy Robot Bookshelf", CI),
   work("underwater-diver", "Underwater Diver", CI),
-  work("underwater-mermaid", "Underwater Mermaid", CI, "jpg", L),
+  work("underwater-mermaid", "Underwater Mermaid", CI, "png", L),
   work("window-display", "Window Display", CI, "jpg", L),
 ];
 
@@ -127,10 +127,7 @@ for (const work of worksData) {
   }
 }
 export const categories = [
-  { label: "Illustration", value: "illustration" },
   { label: "Graphic Design", value: "graphic-design" },
-  { label: "Web Development", value: "web-development" },
-  { label: "Patterns", value: "patterns" },
   { label: "Children's Illustration", value: "childrens-illustration" },
   { label: "Fine Arts", value: "fine-arts" },
 ];

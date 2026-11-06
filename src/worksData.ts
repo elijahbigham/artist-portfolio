@@ -13,7 +13,7 @@ export interface Work {
 }
 
 const work = (
-  folder: string,
+  slug: string,
   title: string,
   tags: string[],
   ext: "jpg" | "png" = "jpg",
@@ -23,7 +23,7 @@ const work = (
   title,
   tags,
   images: Object.fromEntries(
-    sizes.map((size) => [size, `/works/${folder}/${folder}-${size}.${ext}`]),
+    sizes.map((size) => [size, `/works/${slug}/${slug}-${size}.${ext}`]),
   ),
   project: project ?? undefined,
 });
@@ -79,7 +79,14 @@ const worksData: Work[] = [
   }),
   work("bread-testimonial", "Bread Testimonial", GD),
   work("granola-label", "Granola Label", GD, "png"),
-  work("all-is-well-poster", '"All is Well" Poster', GD, "jpg", LS, filmPosters),
+  work(
+    "all-is-well-poster",
+    '"All is Well" Poster',
+    GD,
+    "jpg",
+    LS,
+    filmPosters,
+  ),
   work(
     "all-is-well-poster-alt",
     '"All is Well" Poster, Alternate Version',
@@ -88,7 +95,14 @@ const worksData: Work[] = [
     LS,
     filmPosters,
   ),
-  work("lightstreet-poster", '"Lightstreet" Poster', GD, "png", LS, filmPosters),
+  work(
+    "lightstreet-poster",
+    '"Lightstreet" Poster',
+    GD,
+    "png",
+    LS,
+    filmPosters,
+  ),
   work(
     "no-pets-poster",
     '"No Pets" Poster',

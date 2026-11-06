@@ -4,6 +4,7 @@ import "./Work.scss";
 
 interface WorkProps {
   work: {
+    slug: string;
     title: string;
     images: {
       large?: string;
@@ -29,7 +30,7 @@ export default function Work({ work, project }: WorkProps) {
   return (
     <Link
       className="work"
-      to={project ? `/projects/${project.slug}` : `/works/${work.title}`}
+      to={project ? `/projects/${project.slug}` : `/works/${work.slug}`}
       aria-label={`${work.title} ${project ? "- " + project.title : ""}`}
     >
       {image}

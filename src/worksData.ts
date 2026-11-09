@@ -152,7 +152,7 @@ const worksData: Work[] = [
   work("dilbert-tattoo", "Dilbert Tattoo", FA, "png", L),
   work("hot-dog-woman", "Hot Dog Woman", FA, "png", L),
   work("ireland-map", "Ireland Map", FA, "png", L),
-  work("mr-scribble-cover", "Mr. Scribble Cover", FA, "png", L),
+  work("mr-scribble-cover", "Mr. Scribble Cover", FA, "jpg", L),
   work("pool-man", "Pool Man", FA, "png", L),
 ];
 

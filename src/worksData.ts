@@ -148,6 +148,12 @@ const worksData: Work[] = [
   work("underwater-diver", "Underwater Diver", CI),
   work("underwater-mermaid", "Underwater Mermaid", CI, "png", L),
   work("window-display", "Window Display", CI, "jpg", L),
+  work("ashes-comic", "Ashes Comic", FA, "png", L),
+  work("dilbert-tattoo", "Dilbert Tattoo", FA, "png", L),
+  work("hot-dog-woman", "Hot Dog Woman", FA, "png", L),
+  work("ireland-map", "Ireland Map", FA, "png", L),
+  work("mr-scribble-cover", "Mr. Scribble Cover", FA, "png", L),
+  work("pool-man", "Pool Man", FA, "png", L),
 ];
 
 export default worksData;

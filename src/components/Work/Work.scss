@@ -9,3 +9,24 @@
     height: auto;
   }
 }
+.work {
+  position: relative;
+
+  .work-title-overlay {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.work:hover .work-title-overlay {
+  display: flex;
+}

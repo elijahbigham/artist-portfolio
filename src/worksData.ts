@@ -36,10 +36,21 @@ const FA = ["fine-arts"];
 const LS: Size[] = ["large", "small"];
 const L: Size[] = ["large"];
 const S: Size[] = ["small"];
+const LMS: Size[] = ["large", "medium", "small"];
+
 const filmPosters: Project = { slug: "film-posters", title: "Film Posters" };
+const patterns: Project = { slug: "patterns", title: "Patterns" };
 
 const worksData: Work[] = [
   work("highway-vape", "Smoke Break", FA),
+  work("the-octopus-poster", '"The Octopus" Poster', GD, "jpg", LS, {
+    ...filmPosters,
+    cover: true,
+  }),
+  work("ocean-creatures-pattern", "Ocean Creatures Pattern", CI, "jpg", LMS, {
+    ...patterns,
+    cover: true,
+  }),
   work("flyrod-rainbow-trout", "Rainbow Trout", CI),
   work("street", "Street Scene", CI),
   work("millionaire-shortbread", "Millionaire Shortbread", CI),
@@ -73,12 +84,8 @@ const worksData: Work[] = [
   work("ouija", "Ouija", CI, "png"),
   work("egg-ham-and-chips", "Egg, Ham, and Chips", CI),
   work("self-portrait", "Self Portrait", FA, "jpg", LS),
-  work("beetle-party", "Beetle Party", CI, "png", LS),
+  work("beetle-party", "Beetle Party", CI, "png", LS, patterns),
   work("irish-stew", "Irish Stew", CI),
-  work("the-octopus-poster", '"The Octopus" Poster', GD, "jpg", LS, {
-    ...filmPosters,
-    cover: true,
-  }),
   work("bread-testimonial", "Bread Testimonial", GD),
   work("granola-label", "Granola Label", GD, "png"),
   work(
@@ -105,33 +112,32 @@ const worksData: Work[] = [
     LS,
     filmPosters,
   ),
-  work(
-    "no-pets-poster",
-    '"No Pets" Poster',
-    GD,
-    "png",
-    ["large", "medium", "small"],
-    filmPosters,
-  ),
+  work("no-pets-poster", '"No Pets" Poster', GD, "png", LMS, filmPosters),
   work("bday-info", "B-Day Info", GD),
   work("iluma", "Iluma", GD),
   work("panerica-poster", '"Panerica" Poster', GD, "png", LS, filmPosters),
   work("web-development", "Web Development", GD, "png", S),
-  work("seashell-pattern", "Seashell Pattern", CI),
+  work("seashell-pattern", "Seashell Pattern", CI, "jpg", LMS, patterns),
   work("battleship", "Battleship", CI),
   work("central-park", "Central Park", CI),
-  work("christmas-ornaments", "Christmas Ornaments", CI),
+  work("christmas-ornaments", "Christmas Ornaments", CI, "jpg", LMS, patterns),
   work("constantine", "Constantine", CI),
-  work("coral-pattern", "Coral Pattern", CI),
-  work("fish-ocean-pattern", "Fish Ocean Pattern", CI),
+  work("coral-pattern", "Coral Pattern", CI, "jpg", LMS, patterns),
+  work(
+    "colorful-fish-pattern",
+    "Colorful Fish Pattern",
+    CI,
+    "jpg",
+    LMS,
+    patterns,
+  ),
   work("flax-granola-infographic", "Flax Granola Infographic", GD),
   work("flyrod-cover", "Flyrod Cover", CI),
   work("girl-and-dog-soccer", "Girl and Dog Playing Soccer", CI, "jpg", L),
   work("girls-running", "Girls Running", CI),
   work("going-green-with-constantine", "Going Green with Constantine", CI),
   work("haunted-interior", "Haunted Interior", CI, "jpg", L),
-  work("junk-food-pattern", "Junk Food Pattern", CI, "jpg", LS),
-  work("ocean-creatures-pattern", "Ocean Creatures Pattern", CI),
+  work("junk-food-pattern", "Junk Food Pattern", CI, "jpg", LS, patterns),
   work("octopus-builder", "Octopus Builder", CI),
   work("pig-and-pumpkins", "Pig and Pumpkins", CI, "png", L),
   work(
@@ -142,7 +148,7 @@ const worksData: Work[] = [
     L,
   ),
   work("pig-in-vegetable-garden", "Pig in Vegetable Garden", CI, "png"),
-  work("pink-floral-pattern", "Pink Floral Pattern", CI, "jpg", LS),
+  work("pink-floral-pattern", "Pink Floral Pattern", CI, "jpg", LS, patterns),
   work("submarine-coral-reef", "Submarine Coral Reef", CI, "jpg", LS),
   work("toy-robot-bookshelf", "Toy Robot Bookshelf", CI),
   work("underwater-diver", "Underwater Diver", CI),

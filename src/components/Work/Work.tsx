@@ -23,7 +23,7 @@ export default function Work({ work, project }: WorkProps) {
       {large && <source srcSet={large} media="(min-width: 1024px)" />}
       {medium && <source srcSet={medium} media="(min-width: 768px)" />}
       <source srcSet={small} media="(min-width: 480px)" />
-      <img src={small} alt={work.title} />
+      <img src={small} alt={work.title} loading="lazy" />
     </picture>
   );
 

@@ -16,16 +16,7 @@ interface WorkProps {
 }
 
 export default function Work({ work, project }: WorkProps) {
-  const { large, medium } = work.images;
-  const small = work.images.small ?? medium ?? large;
-  const image = (
-    <picture>
-      {large && <source srcSet={large} media="(min-width: 1024px)" />}
-      {medium && <source srcSet={medium} media="(min-width: 768px)" />}
-      <source srcSet={small} media="(min-width: 480px)" />
-      <img src={small} alt={work.title} loading="lazy" />
-    </picture>
-  );
+  const image = work.images.small ?? work.images.medium ?? work.images.large;
 
   return (
     <Link
@@ -33,7 +24,7 @@ export default function Work({ work, project }: WorkProps) {
       to={project ? `/projects/${project.slug}` : `/works/${work.slug}`}
       aria-label={`${work.title} ${project ? "- " + project.title : ""}`}
     >
-      {image}
+      <img src={image} alt={work.title} loading="lazy" />
       <div className="work-title-overlay">{project && project.title}</div>
     </Link>
   );

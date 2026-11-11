@@ -24,7 +24,7 @@ export default function Work({ work, project }: WorkProps) {
       to={project ? `/projects/${project.slug}` : `/works/${work.slug}`}
       aria-label={`${work.title} ${project ? "- " + project.title : ""}`}
     >
-      <img src={image} alt={work.title} loading="lazy" />
+      <img src={image} alt={work.title} />
       <div className="work-title-overlay">{project && project.title}</div>
     </Link>
   );

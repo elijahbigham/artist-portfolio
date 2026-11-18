@@ -40,6 +40,13 @@ const LMS: Size[] = ["large", "medium", "small"];
 
 const filmPosters: Project = { slug: "film-posters", title: "Film Posters" };
 const patterns: Project = { slug: "patterns", title: "Patterns" };
+const bread: Project = {
+  slug: "bread",
+  title: "Columbia County Bread & Granola",
+};
+const otherWork: Project = { slug: "other-work", title: "Other Work" };
+const bonMarche: Project = { slug: "bon-marche", title: "Bon Marché" };
+const iluma: Project = { slug: "iluma", title: "Iluma Learning" };
 
 const worksData: Work[] = [
   work("highway-vape", "Smoke Break", FA),
@@ -70,12 +77,12 @@ const worksData: Work[] = [
     "jpg",
     LS,
   ),
-  work("flax-granola", "Flax Granola", GD, "jpg", LS),
+  work("flax-granola", "Flax Granola", GD, "jpg", LS, bread),
   work("tarantula", "Tarantula", FA, "png"),
   work("austen-puzzle", "Austen Puzzle", CI),
   work("astoria-park", "Astoria Park", CI),
   work("sunhead", "Sunhead", CI, "jpg", LS),
-  work("astoria-poster", "Astoria Poster", GD),
+  work("astoria-poster", "Astoria Poster", GD, "jpg", LMS, otherWork),
   work("angel", "Angel", ["childrens-illustration", "fine-arts"], "png", LS),
   work("cento", "Cento", FA, "png", LS),
   work("little-women", "Little Women", CI, "jpg", LS),
@@ -86,8 +93,11 @@ const worksData: Work[] = [
   work("self-portrait", "Self Portrait", FA, "jpg", LS),
   work("beetle-party", "Beetle Party", CI, "png", LS, patterns),
   work("irish-stew", "Irish Stew", CI),
-  work("bread-testimonial", "Bread Testimonial", GD),
-  work("granola-label", "Granola Label", GD, "png"),
+  work("bread-testimonial", "Bread Testimonial", GD, "jpg", LMS, {
+    ...bread,
+    cover: true,
+  }),
+  work("granola-label", "Granola Label", GD, "png", LMS, bread),
   work(
     "all-is-well-poster",
     '"All is Well" Poster',
@@ -113,10 +123,16 @@ const worksData: Work[] = [
     filmPosters,
   ),
   work("no-pets-poster", '"No Pets" Poster', GD, "png", LMS, filmPosters),
-  work("bday-info", "B-Day Info", GD),
-  work("iluma", "Iluma", GD),
+  work("bday-info", "Bon Marché Form", GD, "jpg", LMS, {
+    ...bonMarche,
+    cover: true,
+  }),
+  work("iluma", "Iluma", GD, "jpg", LMS, iluma),
   work("panerica-poster", '"Panerica" Poster', GD, "png", LS, filmPosters),
-  work("web-development", "Web Development", GD, "png", S),
+  work("web-development", "Web Development", GD, "png", S, {
+    ...otherWork,
+    cover: true,
+  }),
   work("seashell-pattern", "Seashell Pattern", CI, "jpg", LMS, patterns),
   work("battleship", "Battleship", CI),
   work("central-park", "Central Park", CI),
@@ -131,7 +147,14 @@ const worksData: Work[] = [
     LMS,
     patterns,
   ),
-  work("flax-granola-infographic", "Flax Granola Infographic", GD),
+  work(
+    "flax-granola-infographic",
+    "Flax Granola Infographic",
+    GD,
+    "jpg",
+    LMS,
+    bread,
+  ),
   work("flyrod-cover", "Flyrod Cover", CI),
   work("girl-and-dog-soccer", "Girl and Dog Playing Soccer", CI, "jpg", L),
   work("girls-running", "Girls Running", CI),

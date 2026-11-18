@@ -15,7 +15,10 @@ export default function WorkPage({
     : worksData;
   return (
     <WorkGrid
-      works={worksDataFiltered.filter((work) => !work.project || work.project.cover)}
+      works={worksDataFiltered.filter(
+        (work) => !work.project || work.project.cover,
+      )}
+      categoryClassNames={categories?.map(({ value }) => value) ?? []}
       linkProjects
     />
   );

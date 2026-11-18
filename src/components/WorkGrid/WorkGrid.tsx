@@ -6,12 +6,16 @@ import "./WorkGrid.scss";
 export default function WorkGrid({
   works,
   linkProjects = false,
+  categoryClassNames,
 }: {
   works: WorkData[];
   linkProjects?: boolean;
+  categoryClassNames?: string[];
 }) {
   return (
-    <div className="work-grid">
+    <div
+      className={`work-grid ${categoryClassNames && categoryClassNames.join(" ")}`}
+    >
       {works.map((work) => (
         <Work
           key={work.title}

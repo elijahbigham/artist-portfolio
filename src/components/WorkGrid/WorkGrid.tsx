@@ -14,7 +14,7 @@ export default function WorkGrid({
 }) {
   return (
     <div
-      className={`work-grid ${categoryClassNames && categoryClassNames.join(" ")}`}
+      className={`work-grid ${categoryClassNames && categoryClassNames.join(" ")} ${linkProjects ? "link-projects" : ""}`}
     >
       {works.map((work) => (
         <Work

@@ -12,9 +12,9 @@ export default function ProjectPage() {
   }
 
   return (
-    <>
+    <div className="project-page">
       <h1>{project.title}</h1>
       <WorkGrid works={works} />
-    </>
+    </div>
   );
 }

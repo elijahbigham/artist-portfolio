@@ -19,7 +19,7 @@ export default function WorkPage({
         (work) => !work.project || work.project.cover,
       )}
       categoryClassNames={categories?.map(({ value }) => value) ?? []}
-      linkProjects
+      linkProjects={worksDataFiltered.some((work) => work.project)}
     />
   );
 }
